@@ -1,6 +1,6 @@
 my_list = ["apple", "banana", "cherry","apple"]
-# remove element by directly from a list
+# best if remove element 
 # remove the third element
-del my_list[2]
-
+removed_element=my_list.pop(2)
 print(my_list)
+print(removed_element)
