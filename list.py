@@ -1,11 +1,13 @@
 fruits = ["apple", "banana", "orange", "banana", "grape"]
-# find the item in list
+# is data exist in the list
 
-# If you need to find all occurrences of "banana"
+
 try:
-    indexes=[i for i,fruit in enumerate(fruits) if fruit=='banana']
-    print('all index of banana',indexes)
+    if fruits.count('bananas')>0:
+        print('yes, banana is present in the list')
+    else:
+        print('banana is not in list')
 except:
-    print('banana is not in list')
+    print('There was an error occured')
 
 
