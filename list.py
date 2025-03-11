@@ -17,4 +17,8 @@ if "data" in my_list:
 else:
     print('no, data is not exist in list')
 
+print("add data in list in the last position")
+
+my_list.append('pineapple')
+print(my_list)
 
