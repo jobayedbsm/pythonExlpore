@@ -10,3 +10,11 @@ my_list[1]='jobayed'
 for data in my_list:
     print(data)
 
+print('is there specific data exist')
+
+if "data" in my_list:
+    print('yes,data is exists there')
+else:
+    print('no, data is not exist in list')
+
+
