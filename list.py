@@ -1,11 +1,10 @@
-my_list = ["apple", "banana", "cherry","apple"]
+fruits = ["apple", "banana", "orange", "banana", "grape"]
 # find the item in list
-finditem=my_list.index('banana')
-# handing error if data not exist
 
+# If you need to find all occurrences of "banana"
 try:
-    finditem=my_list.index('banana')
-    print('index of banana',finditem)
+    indexes=[i for i,fruit in enumerate(fruits) if fruit=='banana']
+    print('all index of banana',indexes)
 except:
     print('banana is not in list')
 
