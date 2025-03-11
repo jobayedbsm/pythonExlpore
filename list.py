@@ -1,11 +1,6 @@
 my_list = ["apple", "banana", "cherry","apple"]
+# remove element by directly from a list
+# remove the third element
+del my_list[2]
 
-
-
-# will return new list
-newList=my_list+[100, 200, 300]
-print(newList)
-
-# will return new list by list unpacking
-newList2=[*my_list,*[100, 200, 300]]
-print(newList2)
+print(my_list)
