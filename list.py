@@ -1,6 +1,4 @@
 my_list = ["apple", "banana", "cherry","apple"]
-# best if remove element 
-# remove the third element
-removed_element=my_list.pop(2)
-print(my_list)
-print(removed_element)
+# want not modify or change existing list
+new_list=my_list[:2]+my_list[3:]
+print(new_list)
