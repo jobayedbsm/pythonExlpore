@@ -1,2 +1,2 @@
-cart = ("Milk", "Eggs", "Bread")
-print(cart.count("Milk"))
+cart = ("Milk", "Eggs", "Bread","Milk")
+print(cart)
