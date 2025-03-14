@@ -1,8 +1,8 @@
 my_set = {'jk','pineapple','jackfruits','jk'}
-another_set={"pineapple","tj"}
+another_set={"pineapple","tj","jk"}
 
-my_set.update(another_set)
-print(my_set)
+try:
+    my_set.remove('tanvir')
+except KeyError:
+    print('data not exist to remove')
 
-new_set=my_set.union(another_set)
-print(new_set)
