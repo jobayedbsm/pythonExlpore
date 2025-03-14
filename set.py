@@ -1,5 +1,8 @@
 my_set = {'jk','pineapple','jackfruits','jk'}
-another_set={"pineapple","jk"}
+another_set={"pineapple","tj"}
 
-differenceSet=my_set.difference_update(another_set)
+my_set.update(another_set)
 print(my_set)
+
+new_set=my_set.union(another_set)
+print(new_set)
