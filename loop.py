@@ -6,18 +6,18 @@ students = {
     "Emma": 78
 }
 
-def grade(scores):
-    if scores>90:
-        return "A"
-    elif scores>=80:
-        return "B"
-    elif scores >=70:
-        return "C"
-    elif scores >=60:
-        return "D"
-    else:
-        return "F"
-    
-for name,value in students.items():
-    print(f"{name} his grade is {grade(value)}")
-print('Graddig calculation has succesfully done')
+def grade(st):
+  if st>=90:
+    return "A"
+  elif st>=80:
+    return "B"
+  elif st>=70:
+    return "C"
+  elif st>=60:
+    return "D"
+  else:
+    return "F"
+  
+
+for i,v in students.items():
+  print(f"{i} is grade {v}")
