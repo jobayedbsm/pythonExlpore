@@ -1,6 +1,7 @@
 fruits = ["apple", "banana", "orange", "banana", "grape"]
+# it's means value in extend should be iterable 
 
-allOcurenceOfBanana=[index for index,value in enumerate(fruits) if value=="banana"]
+print(fruits.index('banana'))
 
-for index in allOcurenceOfBanana:
-    print('banana all index=',index)
+newListWithOutBanana=[fruit for fruit in fruits if fruit=='banana']
+print(newListWithOutBanana)

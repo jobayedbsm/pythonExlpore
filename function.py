@@ -1,23 +1,18 @@
-class UserAuth:
+# userAuth
+class userAuth(username,password):
     def __init__(self):
-        self.users = {"jobayed": "securepassword"}  # Sample user database
+        self.user={
+            'username': 'jobayed'
+        }
+    def login(self,username,password):
+        if username in self and self[username]==password:
+            print('login successfully')
+    def register(self,username,password):
+        pass
+    
+    def resetPassword(self,username,password):
+        if username in self.user:
+            self['username']=password
 
-    def login(self, username, password):
-        """Validate user login credentials."""
-        if username in self.users and self.users[username] == password:
-            print("Login successful!")
-        else:
-            print("Invalid username or password.")
-
-    def register(self, username, password):
-        """Register a new user - To be implemented."""
-        pass  # Future implementation for adding users
-
-    def reset_password(self, username):
-        """Reset user password - To be implemented."""
-        pass  # Future password reset logic
-
-# Usage
-auth = UserAuth()
-auth.login("jobayed", "securepassword")  # ✅ Login successful!
-auth.register("newuser", "newpass")      # Currently does nothing
+users=userAuth()
+userAuth.login('jobayed','hossen')
