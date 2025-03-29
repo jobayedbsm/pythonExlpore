@@ -1,4 +1,8 @@
-my_list = [1, 2,3, 4, 5]
-new_list=list(filter(lambda x:x !=2,my_list))
-print(new_list)
+# Reversing a Sentence (Words Order)
+sentence="I love you"
+#  first splic the each world
+sentence=sentence.split(" ")
+sentence.reverse()
 
+sentence=" ".join(sentence)
+print(sentence)
