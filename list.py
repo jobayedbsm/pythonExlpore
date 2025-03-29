@@ -1,7 +1,12 @@
-fruits = ["apple", "banana", "orange", "banana", "grape"]
-# it's means value in extend should be iterable 
+timeline = [0, 10, 20, 30, 40, 50]
 
-print(fruits.index('banana'))
+# Ads timestamp
+ads_timestamp=25
 
-newListWithOutBanana=[fruit for fruit in fruits if fruit=='banana']
-print(newListWithOutBanana)
+# find the correct index for insertaion
+for i in range(len(timeline)):
+    if timeline[i]>ads_timestamp:
+        timeline.insert(i,ads_timestamp)
+        break
+
+print(timeline)
