@@ -1,12 +1,11 @@
-timeline = [0, 10, 20, 30, 40, 50]
+import time
+ticket_queue = [101, 102, 103, 104, 105]
 
-# Ads timestamp
-ads_timestamp=25
-
-# find the correct index for insertaion
-for i in range(len(timeline)):
-    if timeline[i]>ads_timestamp:
-        timeline.insert(i,ads_timestamp)
-        break
-
-print(timeline)
+while ticket_queue:
+    current_ticket=ticket_queue.pop(0)
+    print(f"Current ticket",current_ticket)
+    time.sleep(4)
+    if len(ticket_queue)<3:
+        new_ticket=ticket_queue[-1]+1 if ticket_queue else 106
+        ticket_queue.append(new_ticket)
+        print(f"new customer",new_ticket)
