@@ -1,6 +1,11 @@
-students = [("Alice", 25, 3.5), ("Bob", 20, 3.8), ("Charlie", 30, 3.2), ("David", 20, 3.9)]
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def __repr__(self):
+        return f"{self.name} ({self.age})"
 
-# sort by multiple criteria
-# Sort by Age, then by GPA (Descending)
-students.sort(key=lambda x :(x[1],-x[2]))
-print(students)
+
+new_person_list=[Person('jobayed',23),Person('Tanvir',35)]
+new_person_list.sort(key=lambda x:x.name)
+print(new_person_list)
