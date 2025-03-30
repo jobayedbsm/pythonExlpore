@@ -1,5 +1,9 @@
-students = [("Bob", 20, 3.8),("Alice", 25, 3.5),  ("Charlie", 30, 3.2)]
+employees = [
+    {"name": "Alice", "age": 25, "salary": 5000},
+    {"name": "Bob", "age": 20, "salary": 7000},
+    {"name": "Charlie", "age": 30, "salary": 4500},
+]
 
-students.sort(key=lambda x: x[1])
+employees.sort(key=lambda x: x['salary'])
 
-print(students)
+print(employees)
