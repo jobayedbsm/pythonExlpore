@@ -1,11 +1,26 @@
-class Person:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
-    def __repr__(self):
-        return f"{self.name} ({self.age})"
+# parent class with deposit function 
+class BankAccount:
+    def __init__(self,accountNumber,holderName,balance=1000):
+        self.accountNumber=accountNumber
+        self.holderName=holderName
+        self.balance=balance
+    def deposite(self,amount):
+        self.balance+=amount
+        return f"New balance added {amount} Total balance is {self.balance}"
+    
+# child class inherit Parent class all method 
 
+class BankChild(BankAccount):
+    def __init__(self,accountNumber,holderName):
+        super().__init__(accountNumber,holderName)
+    def withdraw(self,amount):
+        if (amount>self.balance):
+            print('Balance is excedded')
+        self.balance-=amount
+        return f'Withdraw balance {amount} remaining balance {self.balance}'
+    
 
-new_person_list=[Person('jobayed',23),Person('Tanvir',35)]
-new_person_list.sort(key=lambda x:x.name)
-print(new_person_list)
+b1=BankChild(12334,'Jobayed')
+print(b1.deposite(3400))
+print(b1.deposite(3400))
+print(b1.withdraw(2000))
