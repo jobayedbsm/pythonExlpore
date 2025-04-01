@@ -1,26 +1,18 @@
-# parent class with deposit function 
-class BankAccount:
-    def __init__(self,accountNumber,holderName,balance=1000):
-        self.accountNumber=accountNumber
-        self.holderName=holderName
-        self.balance=balance
-    def deposite(self,amount):
-        self.balance+=amount
-        return f"New balance added {amount} Total balance is {self.balance}"
-    
-# child class inherit Parent class all method 
+# For data analysis generat random customer detials
 
-class BankChild(BankAccount):
-    def __init__(self,accountNumber,holderName):
-        super().__init__(accountNumber,holderName)
-    def withdraw(self,amount):
-        if (amount>self.balance):
-            print('Balance is excedded')
-        self.balance-=amount
-        return f'Withdraw balance {amount} remaining balance {self.balance}'
+class Customer:
+    def __init__(self,name,department,salary):
+        self.name=name
+        self.department=department
+        self.salary=salary
+    def __repr__(self):
+        return f'[{self.name},{self.department},{self.salary}]'
     
+c1=Customer('jobayed','data analysis',40000)
+c2=Customer('hossen','marketing',76000)
+c3=Customer('islam','sales',30000)
 
-b1=BankChild(12334,'Jobayed')
-print(b1.deposite(3400))
-print(b1.deposite(3400))
-print(b1.withdraw(2000))
+c_list=[c1,c2,c3]
+# getting the highest salary 
+heightSalary=[hsalary.salary for hsalary in c_list]
+print(max(heightSalary))
